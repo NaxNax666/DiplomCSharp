@@ -22,7 +22,7 @@ namespace Diplom
         {
             InitializeComponent();
             BalanceLabel.Text = buyer.bill.ToString();
-            SelectAuthor.Items.AddRange();
+            SelectAuthor.Items.AddRange(new string[] { "Уругвай", "Эквадор" });//ЗАГЛУШКА ИСПРАВИТЬ
             ConfirmButton.Hide();
 ;
             CostLabel.Hide();
@@ -30,7 +30,7 @@ namespace Diplom
 
         private void SelectAuthor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectTitle.Items.AddRange();
+            SelectTitle.Items.AddRange(new string[] { "Уругвай", "Эквадор" });//ЗАГЛУШКА ИСПРАВИТЬ
             
         }
 

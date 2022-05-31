@@ -50,7 +50,7 @@ namespace Diplom
 
 
 
-        public void NewPublication(string title, float cost)
+        public void NewPublication(string title, int cost)
         {
             Publication publication = new Publication(title, this.Public_Key, cost);
             string ask = String.Format("insert into AuthorPublicationList values ('{0}','{1}',{2})", this.name, publication.Title, publication.Cost);

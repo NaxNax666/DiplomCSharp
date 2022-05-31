@@ -15,8 +15,9 @@ namespace Diplom
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Diplom.Properties.Settings.Diplom_primaryConnectionString"].ConnectionString;
         private ContractPublish contract;
+        private string UserName;
 
-        public OrderList()
+        public OrderList(string UserName)
         {
             InitializeComponent();
         }
@@ -28,7 +29,8 @@ namespace Diplom
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            contract = new ContractPublish();
+            string title="";
+            contract = new ContractPublish(new Copyrighter(orderBox.SelectedItem.ToString()), new User(UserName), title);
 
         }
     }

@@ -12,7 +12,7 @@ namespace Diplom
         public string Title { get { return Title; } set { Title = value; } }
        private string Watermark { get; set; }
         public int Cost;
-       public Publication(string title, string Authsign, float cost)
+       public Publication(string title, string Authsign, int cost)
         {
             this.Title = title;
             byte[] source;

@@ -22,10 +22,10 @@ namespace Diplom
         {
             InitializeComponent();
             List<string> title = new List<string>();
-            List<float> cost = new List<float>();
+            List<int> cost = new List<int>();
             string PubK;
             float bill;
-            Copyrighter = new Copyrighter(name, bill);
+            Copyrighter = new Copyrighter(name);
             for(int i=0; i<title.Count; i++)
             {
                 Copyrighter.NewPublication(title[i], cost[i]);

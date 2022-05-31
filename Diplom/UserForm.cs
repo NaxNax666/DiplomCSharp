@@ -23,7 +23,7 @@ namespace Diplom
             List<Publication> title = new List<Publication>();
             string PubK;
             float bill;
-            User= new User(name, bill);
+            User= new User(name);
             for (int i = 0; i < title.Count; i++)
             {
                 User.AddPublication(title[i]);

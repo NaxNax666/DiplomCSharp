@@ -10,11 +10,11 @@ namespace Diplom
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["Diplom.Properties.Settings.Diplom_primaryConnectionString"].ConnectionString;
         private float buffBill;
-        private float deposit = 200;
+        private int deposit = 200;
         private Copyrighter copyrighter;
         private User user;
         private string Contract_id;
-        ContractPublish(Copyrighter cp, User ur, string title)
+        public ContractPublish(Copyrighter cp, User ur, string title)
         {
             this.copyrighter = cp;
             this.user = ur;
