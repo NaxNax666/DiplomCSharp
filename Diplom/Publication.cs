@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
+using System.Configuration;
 
 namespace Diplom
 {
-    class Publication
+    public class Publication
     {
-       public string Title { get { return Title; } set { Title = value; } }
+        private string connectionString = ConfigurationManager.ConnectionStrings["Diplom.Properties.Settings.Diplom_primaryConnectionString"].ConnectionString;
+        public string Title { get { return Title; } set { Title = value; } }
        private string Watermark { get; set; }
-        public float Cost;
+        public int Cost;
        public Publication(string title, string Authsign, float cost)
         {
             this.Title = title;

@@ -4,12 +4,14 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Xml.Serialization;
 using System.IO;
+using System.Configuration;
 
 
 namespace Diplom
 {
-    class RsaEncryption
+    public class RsaEncryption
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["Diplom.Properties.Settings.Diplom_primaryConnectionString"].ConnectionString;
         private static RSACryptoServiceProvider csp = new RSACryptoServiceProvider();
         private RSAParameters _privateKey;
         private RSAParameters _publicKey;
@@ -25,6 +27,14 @@ namespace Diplom
             var sw = new StringWriter();
             var xs = new XmlSerializer(typeof(RSAParameters));
             xs.Serialize(sw, _publicKey);
+            return sw.ToString();
+        }
+
+        public string GetPrivateKey()
+        {
+            var sw = new StringWriter();
+            var xs = new XmlSerializer(typeof(RSAParameters));
+            xs.Serialize(sw, _privateKey);
             return sw.ToString();
         }
 

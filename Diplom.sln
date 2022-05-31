@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplom", "Diplom\Diplom.csproj", "{F4314B93-D964-4A4C-8FA9-D6A1388A631F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplomCsharp", "Diplom\DiplomCsharp.csproj", "{F4314B93-D964-4A4C-8FA9-D6A1388A631F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
