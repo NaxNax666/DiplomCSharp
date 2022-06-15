@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContractPublish.cs" />
+    <Compile Include="ContractReport.cs" />
     <Compile Include="CopyrighterForm.cs">
       <SubType>Form</SubType>
     </Compile>
